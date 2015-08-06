@@ -5,7 +5,16 @@
     <title></title>
 </head>
 <body>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <div>
+        <h1><a href="\">My Blog</a></h1>
+    </div>
+
+    {% for post in posts %}
+        <div>
+            <p>Published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text | linebreaks }}</p>
+        </div>
+    {% endfor %}
 </body>
 </html>
